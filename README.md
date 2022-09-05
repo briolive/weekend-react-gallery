@@ -13,6 +13,7 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
 
 [x] Use `axios` to retrieve (`GET`) data from `/gallery` and store it in `App.jsx`
 [x] Create new component for `GalleryList`
-[] Pass `GalleryList.jsx` the data stored in `App.jsx` via `props`
-    [] Loop over the list of gallery data
-    [] Make GalleryItems
+[x] Pass `GalleryList.jsx` the data stored in `App.jsx` via `props`
+    [x] Loop over the list of gallery data
+    [x] Make GalleryItems
+[x] Use toggle in `GalleryList.jsx` to swap image with description on click

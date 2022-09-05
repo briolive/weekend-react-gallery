@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import axios from 'axios';
+import Container from '@mui/material/Container';
 import GalleryList from '../GalleryList/GalleryList';
+import GalleryItem from '../GalleryItem/GalleryItem';
 
 
 function App() {
 
-  const [galleryList, setGalleryList] = useState([]);
+  const [galleryItems, setGalleryItems] = useState([]);
 
   // called when page loads
   useEffect(() => {
@@ -21,7 +23,7 @@ function App() {
       url: '/gallery',
     }).then(response => {
       // our array is response.data
-      setGalleryList(response.data);
+      setGalleryItems(response.data);
     }).catch(error => {
       console.log(error);
       alert('Something went wrong in GET!');
@@ -33,16 +35,11 @@ function App() {
         <header className="App-header">
           <h1 className="App-title">Gallery of My Life</h1>
         </header>
-        <p>Gallery goes here</p>
-        <img src="images/goat_small.jpg"/>
-        <GalleryList />
-          {galleryList.map((item) => {
-              return <li key={item.id}>
-                <img src={item.path} width="100px"></img>
-                <br />{item.description}
-                <br />Likes: {item.likes}
-                </li>
-            })}
+        <Container>
+        <GalleryList 
+          galleryItems={galleryItems}
+          />
+        </Container>
       </div>
     );
 }

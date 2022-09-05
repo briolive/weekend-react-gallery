@@ -1,12 +1,21 @@
 import React, { useState, useEffect } from 'react';
+import GalleryItem from '../GalleryItem/GalleryItem';
 
-function GalleryList() {
+function GalleryList({galleryItems}) {
+    console.log('in galleryList map');
     return (
-        <div>
-            <p>GalleryList goes here.</p>
+        <div className="GalleryList">
+            {galleryItems.map((galleryItems) => {
+                return (
+                    <GalleryItem 
+                        key={galleryItems.id}
+                        galleryItems={galleryItems}
+                    />
+                )
+            })}
         </div>
     )
-}
+};
 
 
 export default GalleryList
