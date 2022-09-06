@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import GalleryItem from '../GalleryItem/GalleryItem';
 
-function GalleryList({galleryItems}) {
+function GalleryList({galleryItems, likePhoto}) {
     console.log('in galleryList map');
     return (
         <div className="GalleryList">
@@ -10,6 +10,7 @@ function GalleryList({galleryItems}) {
                     <GalleryItem 
                         key={galleryItems.id}
                         galleryItems={galleryItems}
+                        likePhoto={likePhoto}
                     />
                 )
             })}

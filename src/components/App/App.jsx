@@ -28,7 +28,22 @@ function App() {
       console.log(error);
       alert('Something went wrong in GET!');
     });
-  }
+  };
+
+  const likePhoto = (galleryId) => {
+    console.log('in markAsPurchased!');
+    console.log('galleryId', galleryId);
+    console.log('galleryId.likes', galleryId.likes)
+    axios({
+      method: 'PUT',
+      url: `gallery/like/${galleryId}`
+    }).then((response) => {
+      fetchGallery();
+    }).catch((error) => {
+      alert('Something went wrong in PUT!');
+    })
+  };
+
 
     return (
       <div className="App">
@@ -38,6 +53,7 @@ function App() {
         <Container>
         <GalleryList 
           galleryItems={galleryItems}
+          likePhoto={likePhoto}
           />
         </Container>
       </div>

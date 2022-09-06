@@ -17,3 +17,4 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
     [x] Loop over the list of gallery data
     [x] Make GalleryItems
 [x] Use toggle in `GalleryList.jsx` to swap image with description on click
+[x] When like button is clicked, axios `PUT` request is sent to update the like count `/gallery/like/:id`
