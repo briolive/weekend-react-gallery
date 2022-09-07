@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import GalleryItem from '../GalleryItem/GalleryItem';
+import Grid from '@mui/material/Grid';
 
 function GalleryList({galleryItems, likePhoto}) {
-    console.log('in galleryList map');
     return (
-        <div className="GalleryList">
+        <Grid container spacing={2}>
             {galleryItems.map((galleryItems) => {
                 return (
                     <GalleryItem 
@@ -14,7 +14,7 @@ function GalleryList({galleryItems, likePhoto}) {
                     />
                 )
             })}
-        </div>
+        </Grid>
     )
 };
 

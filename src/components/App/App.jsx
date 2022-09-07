@@ -31,7 +31,7 @@ function App() {
   };
 
   const likePhoto = (galleryId) => {
-    console.log('in markAsPurchased!');
+    console.log('in likePhoto!');
     console.log('galleryId', galleryId);
     console.log('galleryId.likes', galleryId.likes)
     axios({
