@@ -1,20 +1,13 @@
-# Project Name
-
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+# Weekend React Gallery
 
 ## Description
 
-Your project description goes here. What problem did you solve? How did you solve it?
+Welcome to my React Photo Gallery! Please enjoy a small collection of some of my favorite memories. Clicking on each photo will toggle between displaying and hiding its description. If you appreciate one of my photos, clicking the Like button will send your like to the server and update the like count on the gallery page. Thanks for stopping by!
 
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
+## Screenshot
 
+![Weekend React Gallery Screenshot](/ReactGallery.png)
 
-## To Do
+## Acknowledgements
 
-[x] Use `axios` to retrieve (`GET`) data from `/gallery` and store it in `App.jsx`
-[x] Create new component for `GalleryList`
-[x] Pass `GalleryList.jsx` the data stored in `App.jsx` via `props`
-    [x] Loop over the list of gallery data
-    [x] Make GalleryItems
-[x] Use toggle in `GalleryList.jsx` to swap image with description on click
-[x] When like button is clicked, axios `PUT` request is sent to update the like count `/gallery/like/:id`
+Thanks to Prime Digital Academy who equipped and helped me to make this application a reality!
